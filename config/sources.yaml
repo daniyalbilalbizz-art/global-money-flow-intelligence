@@ -1,0 +1,47 @@
+version: 1
+policy:
+  require_provenance: true
+  evidence_classes: [reported, estimated, inferred]
+sources:
+  binance_public:
+    name: Binance Public Market Data
+    url: https://data-api.binance.vision
+    access: public_api
+    status: implemented
+    frequency: near_realtime
+  fred:
+    name: Federal Reserve Economic Data
+    url: https://fred.stlouisfed.org/docs/api/fred/
+    access: free_api_key_required
+    status: planned
+    frequency: series_dependent
+  treasury_fiscal_data:
+    name: US Treasury Fiscal Data
+    url: https://fiscaldata.treasury.gov/api-documentation/
+    access: public_api
+    status: planned
+    frequency: dataset_dependent
+  federal_reserve_h41:
+    name: Federal Reserve H.4.1
+    url: https://www.federalreserve.gov/releases/h41/
+    access: public_web
+    status: planned
+    frequency: weekly
+  sec_edgar:
+    name: SEC EDGAR
+    url: https://www.sec.gov/edgar/sec-api-documentation
+    access: public_api
+    status: planned
+    frequency: filing_based
+  defillama:
+    name: DefiLlama
+    url: https://defillama.com/docs/api
+    access: public_api
+    status: planned
+    frequency: endpoint_dependent
+  cftc_cot:
+    name: CFTC Commitments of Traders
+    url: https://www.cftc.gov/MarketReports/CommitmentsofTraders/index.htm
+    access: public_data
+    status: planned
+    frequency: weekly
