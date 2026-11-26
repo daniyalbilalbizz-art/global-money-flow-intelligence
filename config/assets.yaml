@@ -1,0 +1,17 @@
+version: 1
+assets:
+  macro:
+    - {symbol: DXY, name: US Dollar Index, type: index}
+    - {symbol: US10Y, name: US 10-Year Treasury Yield, type: yield}
+    - {symbol: US02Y, name: US 2-Year Treasury Yield, type: yield}
+    - {symbol: US20Y, name: US 20-Year Treasury Yield, type: yield}
+    - {symbol: SPX, name: S&P 500, type: equity_index}
+    - {symbol: NDX, name: Nasdaq 100, type: equity_index}
+    - {symbol: VIX, name: CBOE Volatility Index, type: volatility_index}
+    - {symbol: GOLD, name: Gold, type: commodity}
+    - {symbol: OIL, name: WTI Crude Oil, type: commodity}
+  crypto:
+    - {symbol: BTCUSDT, name: Bitcoin, type: crypto}
+    - {symbol: ETHUSDT, name: Ether, type: crypto}
+    - {symbol: BTC.D, name: Bitcoin Dominance, type: dominance}
+    - {symbol: USDT.D, name: Tether Dominance, type: dominance}
