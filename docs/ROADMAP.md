@@ -7,16 +7,19 @@
 - [x] Initial configuration tests and data policy
 
 ## Phase 1 — Data layer
-- [x] Schema validation, retry/backoff, freshness status and quality checks (initial implementation)
+- [x] Canonical observation validation and quality statuses
+- [x] Bounded HTTP retry/backoff for transient failures
 - [x] SQLite persistence and normalized observation storage
-- [x] FRED ingestion adapter and dashboard workflow (runtime use requires owner's free API key)
-- [x] DefiLlama public stablecoin fetcher
-- [x] SEC submissions and configurable CFTC Socrata fetchers
-- [x] Treasury Fiscal Data generic endpoint adapter
-- [ ] Runtime-verify each provider endpoint, schema, rate limits, publication timestamps and failure modes
+- [x] FRED series adapter and dashboard workflow (runtime use requires owner's free API key)
+- [x] DefiLlama stablecoin overview fetcher
+- [x] SEC submissions metadata adapter
+- [x] Configurable CFTC Socrata adapter (exact dataset ID must be verified before use)
+- [x] Treasury Fiscal Data generic endpoint adapter (exact dataset endpoint must be verified before use)
+- [x] Unit tests and GitHub Actions CI (latest run: 7 passed)
+- [ ] Runtime-verify each provider endpoint, schema, units, publication timestamps, pagination, limits and failure modes
 - [ ] Implement and verify Federal Reserve H.4.1 parser
 - [ ] Verify exact Treasury dataset endpoints and CFTC report dataset ID before enabling scheduled ingestion
-- [ ] Add source-specific units, frequency and freshness policies; automated integration tests
+- [ ] Add source-specific freshness policies and integration tests
 
 ## Phase 2 — Intelligence engines
 - [ ] Macro regime and liquidity analytics
