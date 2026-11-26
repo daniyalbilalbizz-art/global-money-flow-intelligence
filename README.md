@@ -4,18 +4,19 @@ An open-source research workspace for macro conditions, liquidity, institutional
 
 ## Current status
 
-**Phase 0 foundation is in progress.** The repository currently contains a Streamlit dashboard shell, YAML source and asset registries, Python dependencies, and a public Binance ticker adapter. Other modules are roadmap items until their data pipelines and calculations are implemented and tested.
+**Phase 0 foundation is complete. Phase 1 data-layer implementation is underway.** The application includes a Streamlit dashboard, public Binance ticker view, configurable public-source adapters, observation validation, SQLite persistence, and an FRED ingestion workflow. The CI suite currently passes 7 tests. Provider adapters are not all runtime-verified; see [Verification Log](docs/VERIFICATION_LOG.md).
 
 ## Run locally
 
 ```bash
 python -m venv .venv
-source .venv/bin/activate  # Windows: .venv\\Scripts\\activate
+# Windows: .venv\\Scripts\\activate
+# macOS/Linux: source .venv/bin/activate
 pip install -r requirements.txt
 streamlit run app.py
 ```
 
-No API key is needed for the currently implemented Binance public ticker. FRED integration will require a free API key supplied through local environment or deployment secrets when implemented. Never commit credentials.
+No API key is needed for the Binance public ticker or DefiLlama public stablecoin overview. FRED requires a free API key set as `FRED_API_KEY` in the environment or Streamlit secrets. Never commit credentials.
 
 ## Data integrity rules
 
@@ -36,11 +37,11 @@ No API key is needed for the currently implemented Binance public ticker. FRED i
 7. AI Research Analyst
 8. Alerts and Reports
 
-See [Architecture](docs/ARCHITECTURE.md), [Data Policy](docs/DATA_POLICY.md), and [Roadmap](docs/ROADMAP.md).
+See [Architecture](docs/ARCHITECTURE.md), [Data Policy](docs/DATA_POLICY.md), [Phase 1 Data Layer](docs/PHASE1_DATA_LAYER.md), [Verification Log](docs/VERIFICATION_LOG.md), and [Roadmap](docs/ROADMAP.md).
 
 ## Stack
 
-Python · Streamlit · Pandas · Plotly · SQLite (planned) · GitHub Actions (planned)
+Python · Streamlit · Pandas · Plotly · SQLite · GitHub Actions
 
 ## Disclaimer
 
